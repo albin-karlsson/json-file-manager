@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JsonFileManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c44900cf885de7e182cbe427effebacd1158466")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87e2f5ba8c154118fe3281c85d928b83921126bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("JsonFileManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JsonFileManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

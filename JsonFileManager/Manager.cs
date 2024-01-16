@@ -22,12 +22,11 @@ namespace JsonFileManager
         }
 
         // Skriva JSON-fil
-
-        public void WriteJsonFile(string folder, string json, string fileName)
+        public void WriteJsonFile(string json, string fileName)
         {
             if (IsValidJson(json))
             {
-                string filePath = Path.Combine(folder, fileName);
+                string filePath = Path.Combine(Environment.CurrentDirectory, fileName);
                 File.WriteAllText(filePath, json);
             }
         }
