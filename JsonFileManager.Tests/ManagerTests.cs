@@ -41,18 +41,74 @@ namespace JsonFileManager.Tests
             test.Should().Throw<ArgumentException>();
         }
 
+        [Fact]
+        public void CreateJsonFromDict_NullDict_ShouldThrowArgumentNullException()
+        {
+            // Given
+            Dictionary<string, object>? dict = null;
+            Manager manager = new();
 
+            // When
+            Action test = () => manager.CreateJsonFromDict(dict);
 
+            // Then
+            test.Should().Throw<ArgumentNullException>();
+        }
 
+        [Fact]
+        public void CreateJsonFromDict_NullValue_ShouldThrowNullReferenceException()
+        {
+            // Given
+            Dictionary<string, object> dict = new()
+            {
+                { "Name", "Gandalf" },
+                { "Age", null },
+                { "Profession", "Wizard" }
+            };
+            Manager manager = new();
 
+            // When
+            Action test = () => manager.CreateJsonFromDict(dict);
 
+            // Then
+            test.Should().Throw<NullReferenceException>();
+        }
 
+        [Fact]
+        public void WriteJsonFile_ValidJson_ShouldWriteJsonFile()
+        {
+            // Given
+            object obj = new { Name = "Sam Gamgee", Age = 30, Profession = "Gardener" };
+            string json = JsonConvert.SerializeObject(obj);
+            string fileName = "test.json";
+            Manager manager = new();
 
+            // When
+            manager.WriteJsonFile(json, fileName);
 
+            // Then
+            string filePath = Path.Combine(Environment.CurrentDirectory, fileName);
+            string fileContent = File.ReadAllText(filePath);
+            fileContent.Should().BeEquivalentTo(json);
+        }
 
+        // Testa följande:
+        // WriteJsonFile
+        // Invalid JSON
+        // Utfall: Throws JsonReaderException
+        [Fact]
+        public void WriteJsonFile_InvalidJson_ShouldThrowJsonReaderException()
+        {
+            // Given
+            string invalidJson = "This is invalid JSON";
+            string fileName = "test.json";
+            Manager manager = new();
 
+            // When
+            Action test = () => manager.WriteJsonFile(invalidJson, fileName);
 
-
-
+            // Then
+            test.Should().Throw<JsonReaderException>();
+        }
     }
 }

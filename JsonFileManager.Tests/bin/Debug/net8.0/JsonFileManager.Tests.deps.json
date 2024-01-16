@@ -1062,8 +1062,7 @@
       "xunit.runner.visualstudio/2.4.5": {},
       "JsonFileManager/1.0.0": {
         "dependencies": {
-          "Newtonsoft.Json": "13.0.3",
-          "xunit.assert": "2.4.2"
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "JsonFileManager.dll": {}

@@ -1764,8 +1764,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "Newtonsoft.Json": "13.0.3",
-          "xunit.assert": "2.4.2"
+          "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
           "bin/placeholder/JsonFileManager.dll": {}

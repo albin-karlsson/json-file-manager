@@ -16,4 +16,3 @@ C:\Users\albin\Desktop\JsonFileManager\JsonFileManager\obj\Debug\net8.0\ref\Json
 C:\Users\albin\Desktop\JsonFileManager\JsonFileManager\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\albin\Desktop\JsonFileManager\JsonFileManager\obj\Debug\net8.0\JsonFileManager.csproj.AssemblyReference.cache
 C:\Users\albin\Desktop\JsonFileManager\JsonFileManager\obj\Debug\net8.0\JsonFileManager.csproj.CopyComplete
-C:\Users\albin\Desktop\JsonFileManager\JsonFileManager\bin\Debug\net8.0\xunit.assert.dll
